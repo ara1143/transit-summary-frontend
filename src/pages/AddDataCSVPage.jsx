@@ -1,23 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import React from 'react'
+import Hero from '../components/Hero';
+import FileForm from '../components/FileForm';
 
-const AddDataCSVPage = ({ addDataCSVSubmit }) => {
-
-    const navigate = useNavigate();
-
-    const [data, setData] = useState([]);
-
-    const handleFileUpload = (e) => {
-        const file = e.target.files[0];
-    };
+const AddDataCSVPage = () => {
 
     return (
-        <div>
-            {<input type="file" accept=".csv" onChange={handleFileUpload} />}
-     
-        </div>
-    );
+        <>
+            <Hero />
+            <FileForm />
+        </>
+    )
 }
 
-export default AddDataCSVPage
+export default AddDataCSVPage;
